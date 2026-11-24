@@ -90,8 +90,8 @@
         <div class="lesson-image"><img src="img/fig02.png" alt="건강한 혈관과 좁아진 혈관을 비교한 뇌 그림" onerror="this.hidden=true"><div class="image-fallback">뇌혈관의 흐름을<br>그림으로 확인해 보세요.</div></div>
         <div class="callout">갑작스러운 한쪽 마비, 말이 어눌해짐, 시야 이상이 나타나면 즉시 119에 연락하세요.</div>
         <div class="code-card"><span class="code-label">오늘의 한 줄 코드</span><code>뇌 건강 = 혈관 건강을 꾸준히 살피기</code></div>
-        <div class="audio-box"><video id="narration1" src="audio/n1.mp4" poster="img/fig02.png" controls playsinline preload="metadata" aria-label="뇌혈관질환 개념 내레이션 MP4"></video></div>
-        <p class="small-note" id="audioNote1">나레이션 재생이 끝나면 다음 내용으로 이동합니다.</p>
+        <div class="audio-box"><video id="narration1" src="audio/n3.mp4" poster="img/fig02.png" controls playsinline preload="metadata" aria-label="뇌혈관질환 개념 내레이션 MP4"></video></div>
+        <p class="small-note" id="audioNote1">화면이 열리면 자동 재생되며, 끝나면 다음 내용으로 이동합니다.</p>
         <div class="spacer"></div><div class="actions"><button class="btn primary next-btn" data-next="lesson2">다음 내용</button></div>
       </section>
 
@@ -102,7 +102,7 @@
         <div class="callout">가능한 범위에서 하루 30분 이상 걷기 등 규칙적으로 움직여 보세요. 몸 상태나 기존 질환에 맞는 운동은 의료진과 상담하세요.</div>
         <div class="code-card"><span class="code-label">오늘의 한 줄 코드</span><code>매일의 걷기 + 금연 = 혈관을 위한 선택</code></div>
         <div class="audio-box"><video id="narration2" src="audio/n2.mp4" poster="img/fig03.png" controls playsinline preload="metadata" aria-label="생활습관 예방 내레이션 MP4"></video></div>
-        <p class="small-note">나레이션 재생이 끝나면 다음 내용으로 이동합니다.</p>
+        <p class="small-note">화면이 열리면 자동 재생되며, 끝나면 다음 내용으로 이동합니다.</p>
         <div class="spacer"></div><div class="actions"><button class="btn secondary back-btn" data-back="lesson1">이전</button><button class="btn primary next-btn" data-next="lesson3">다음 내용</button></div>
       </section>
 
@@ -115,8 +115,8 @@
         </div>
         <div class="callout">술은 피하고, 국물·절임 음식 등 짠 음식은 줄여 보세요. 약을 임의로 중단하거나 양을 바꾸지 말고 궁금한 점은 의료진이나 약사에게 확인하세요.</div>
         <div class="code-card"><span class="code-label">오늘의 한 줄 코드</span><code>싱겁게 먹기 + 처방대로 복용하기</code></div>
-        <div class="audio-box"><video id="narration3" src="audio/n3.mp4" poster="img/fig04.png" controls playsinline preload="metadata" aria-label="식습관과 복약 내레이션 MP4"></video></div>
-        <p class="small-note">나레이션 재생이 끝나면 퀴즈로 이동합니다.</p>
+        <div class="audio-box"><video id="narration3" src="audio/n1.mp4" poster="img/fig04.png" controls playsinline preload="metadata" aria-label="식습관과 복약 내레이션 MP4"></video></div>
+        <p class="small-note">화면이 열리면 자동 재생되며, 끝나면 퀴즈로 이동합니다.</p>
         <div class="spacer"></div><div class="actions"><button class="btn secondary back-btn" data-back="lesson2">이전</button><button class="btn primary next-btn" data-next="quiz">퀴즈 풀기</button></div>
       </section>
 
@@ -179,14 +179,21 @@
         current = id;
         screens.forEach(screen => screen.classList.toggle('active', screen.id === id));
         progress.textContent = labels[id] || '';
-        narration.forEach(audio => { if (!audio.paused) audio.pause(); });
+        narration.forEach(audio => {
+          audio.autoplay = false;
+          if (!audio.paused) audio.pause();
+        });
         window.scrollTo({top:0, behavior:'smooth'});
         if (id.startsWith('lesson')) {
           const index = Number(id.replace('lesson','')) - 1;
           const audio = narration[index];
           if (audio && audio.getAttribute('src')) {
+            audio.autoplay = true;
             audio.currentTime = 0;
-            audio.play().catch(() => {});
+            audio.play().catch(() => {
+              const note = document.getElementById(`audioNote${index + 1}`);
+              if (note) note.textContent = '자동 재생이 차단됐어요. 플레이어의 재생 버튼을 눌러 주세요.';
+            });
           }
         }
       }
