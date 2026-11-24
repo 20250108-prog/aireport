@@ -42,7 +42,7 @@
     code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:13px; white-space:pre-wrap; word-break:break-word; }
     .audio-box { display:flex; align-items:center; gap:10px; color:var(--muted); font-size:13px; margin:0 0 10px; }
     .audio-box audio { width:100%; height:38px; }
-    .suno-link { display:inline-block; color:var(--green); font-size:13px; font-weight:800; text-decoration:underline; text-underline-offset:3px; margin:0 0 8px; }
+    .audio-box video { display:block; width:100%; max-height:150px; border-radius:12px; background:#10231c; }
     .spacer { flex:1; min-height:12px; }
     .actions { display:flex; gap:10px; margin-top:12px; }
     .btn { min-height:50px; padding:12px 18px; border:0; border-radius:14px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; text-align:center; }
@@ -90,8 +90,7 @@
         <div class="lesson-image"><img src="img/fig02.png" alt="건강한 혈관과 좁아진 혈관을 비교한 뇌 그림" onerror="this.hidden=true"><div class="image-fallback">뇌혈관의 흐름을<br>그림으로 확인해 보세요.</div></div>
         <div class="callout">갑작스러운 한쪽 마비, 말이 어눌해짐, 시야 이상이 나타나면 즉시 119에 연락하세요.</div>
         <div class="code-card"><span class="code-label">오늘의 한 줄 코드</span><code>뇌 건강 = 혈관 건강을 꾸준히 살피기</code></div>
-        <div class="audio-box"><audio id="narration1" src="audio/n1.mp4" controls preload="metadata">내레이션 파일을 찾을 수 없습니다.</audio></div>
-        <a class="suno-link" href="https://suno.com/s/AF4lPt4ey4qx2uwx" target="_blank" rel="noopener">내레이션 1 · Suno에서 듣기 ↗</a>
+        <div class="audio-box"><video id="narration1" src="audio/n1.mp4" poster="img/fig02.png" controls playsinline preload="metadata" aria-label="뇌혈관질환 개념 내레이션 MP4"></video></div>
         <p class="small-note" id="audioNote1">나레이션 재생이 끝나면 다음 내용으로 이동합니다.</p>
         <div class="spacer"></div><div class="actions"><button class="btn primary next-btn" data-next="lesson2">다음 내용</button></div>
       </section>
@@ -102,8 +101,7 @@
         <div class="lesson-image"><img src="img/fig03.png" alt="걷기 운동과 금연을 나타내는 두 장면" onerror="this.hidden=true"><div class="image-fallback">걷기와 금연처럼<br>실천 가능한 습관부터 시작해요.</div></div>
         <div class="callout">가능한 범위에서 하루 30분 이상 걷기 등 규칙적으로 움직여 보세요. 몸 상태나 기존 질환에 맞는 운동은 의료진과 상담하세요.</div>
         <div class="code-card"><span class="code-label">오늘의 한 줄 코드</span><code>매일의 걷기 + 금연 = 혈관을 위한 선택</code></div>
-        <div class="audio-box"><audio id="narration2" src="audio/n2.mp4" controls preload="metadata">내레이션 파일을 찾을 수 없습니다.</audio></div>
-        <a class="suno-link" href="https://suno.com/s/WTtXGgl0jD4OhWez" target="_blank" rel="noopener">내레이션 2 · Suno에서 듣기 ↗</a>
+        <div class="audio-box"><video id="narration2" src="audio/n2.mp4" poster="img/fig03.png" controls playsinline preload="metadata" aria-label="생활습관 예방 내레이션 MP4"></video></div>
         <p class="small-note">나레이션 재생이 끝나면 다음 내용으로 이동합니다.</p>
         <div class="spacer"></div><div class="actions"><button class="btn secondary back-btn" data-back="lesson1">이전</button><button class="btn primary next-btn" data-next="lesson3">다음 내용</button></div>
       </section>
@@ -117,8 +115,7 @@
         </div>
         <div class="callout">술은 피하고, 국물·절임 음식 등 짠 음식은 줄여 보세요. 약을 임의로 중단하거나 양을 바꾸지 말고 궁금한 점은 의료진이나 약사에게 확인하세요.</div>
         <div class="code-card"><span class="code-label">오늘의 한 줄 코드</span><code>싱겁게 먹기 + 처방대로 복용하기</code></div>
-        <div class="audio-box"><audio id="narration3" src="audio/n3.mp4" controls preload="metadata">내레이션 파일을 찾을 수 없습니다.</audio></div>
-        <a class="suno-link" href="https://suno.com/s/C1pXwq4Ew2U9bpQl" target="_blank" rel="noopener">내레이션 3 · Suno에서 듣기 ↗</a>
+        <div class="audio-box"><video id="narration3" src="audio/n3.mp4" poster="img/fig04.png" controls playsinline preload="metadata" aria-label="식습관과 복약 내레이션 MP4"></video></div>
         <p class="small-note">나레이션 재생이 끝나면 퀴즈로 이동합니다.</p>
         <div class="spacer"></div><div class="actions"><button class="btn secondary back-btn" data-back="lesson2">이전</button><button class="btn primary next-btn" data-next="quiz">퀴즈 풀기</button></div>
       </section>

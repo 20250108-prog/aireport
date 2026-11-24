@@ -15,13 +15,13 @@ img/fig02.png  # 뇌혈관질환 개념
 img/fig03.png  # 예방 생활습관
 img/fig04.png  # 예방 식습관
 img/fig05.png  # 예방 복약법
-audio/n1.mp4   # 내레이션 1 (MP4 파일의 음성 트랙)
-audio/n2.mp4   # 내레이션 2 (MP4 파일의 음성 트랙)
-audio/n3.mp4   # 내레이션 3 (MP4 파일의 음성 트랙)
+audio/n1.mp4   # 내레이션 1 MP4
+audio/n2.mp4   # 내레이션 2 MP4
+audio/n3.mp4   # 내레이션 3 MP4
 audio/bgm.mp3  # (선택) 배경음악
 ```
 
-Suno 내레이션은 MP4 파일의 음성 트랙을 각 설명 화면에서 재생합니다. 재생 종료 후 자동으로 다음 내용으로 넘어갑니다. 페이지는 GitHub 저장소의 `main` 브랜치 루트에서 GitHub Pages로 제공됩니다.
+받은 MP4 내레이션을 각 설명 화면의 자체 플레이어에서 재생합니다. 재생이 끝나면 다음 화면으로 자동 이동합니다. 페이지는 GitHub 저장소의 `main` 브랜치 루트에서 GitHub Pages로 제공됩니다.
 
 ## 제작·AI 활용 안내
 
