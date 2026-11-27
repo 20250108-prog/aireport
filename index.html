@@ -14,17 +14,17 @@
     button { cursor:pointer; }
     .app { width:min(100%, 480px); min-height:100svh; background:var(--paper); display:flex; flex-direction:column; position:relative; overflow:hidden; box-shadow:0 0 32px #203c3015; }
     .topbar { height:54px; padding:0 20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); flex:none; }
-    .brand { font-weight:800; font-size:15px; letter-spacing:-.03em; }
-    .progress { color:var(--muted); font-size:13px; }
+    .brand { font-weight:800; font-size:16px; letter-spacing:-.03em; }
+    .progress { color:var(--muted); font-size:15px; }
     main { flex:1; display:flex; flex-direction:column; min-height:0; }
     .screen { display:none; flex:1; flex-direction:column; padding:20px 22px 24px; overflow-y:auto; animation:appear .25s ease-out; }
     .screen.active { display:flex; }
     @keyframes appear { from {opacity:.5;transform:translateY(5px)} to {opacity:1;transform:none} }
-    .eyebrow { color:var(--green); font-size:12px; font-weight:800; letter-spacing:.08em; margin:0 0 8px; }
+    .eyebrow { color:var(--green); font-size:14px; font-weight:800; letter-spacing:.04em; margin:0 0 8px; }
     h1,h2,p { margin-top:0; }
     h1 { font-size:clamp(28px,8vw,38px); line-height:1.25; letter-spacing:-.06em; margin-bottom:12px; }
-    h2 { font-size:25px; line-height:1.35; letter-spacing:-.045em; margin:0 0 10px; }
-    .lead { color:#53675f; line-height:1.65; font-size:15px; margin-bottom:18px; }
+    h2 { font-size:26px; line-height:1.4; letter-spacing:-.04em; margin:0 0 10px; }
+    .lead { color:#53675f; line-height:1.7; font-size:17px; margin-bottom:18px; }
     .hero-image,.lesson-image { position:relative; overflow:hidden; background:linear-gradient(135deg,#edf2e4,#d9e9dc); border-radius:20px; }
     .hero-image { height:min(43svh,340px); min-height:230px; margin:4px 0 20px; }
     .lesson-image { width:100%; aspect-ratio:16/10; margin:10px 0 16px; }
@@ -33,39 +33,39 @@
     .hero-image img,.lesson-image img,.image-wrap img { display:block; width:100%; height:100%; object-fit:cover; }
     .hero-image img { object-position:center 48%; }
     .lesson-image img { object-position:center; }
-    .image-fallback { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:25px; text-align:center; color:#597165; font-size:14px; line-height:1.6; background:radial-gradient(ellipse at 50% 35%,#fff9 0 20%,transparent 55%),linear-gradient(135deg,#edf2e4,#d9e9dc); }
+    .image-fallback { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:25px; text-align:center; color:#597165; font-size:16px; line-height:1.65; background:radial-gradient(ellipse at 50% 35%,#fff9 0 20%,transparent 55%),linear-gradient(135deg,#edf2e4,#d9e9dc); }
     .image-fallback[hidden] { display:none; }
     .hero-image .image-fallback { font-size:18px; font-weight:700; }
-    .callout { background:var(--mint); border:1px solid #dbe9dc; border-radius:16px; padding:15px 16px; margin:0 0 14px; color:#385449; font-size:14px; line-height:1.65; }
+    .callout { background:var(--mint); border:1px solid #dbe9dc; border-radius:16px; padding:15px 16px; margin:0 0 14px; color:#385449; font-size:16px; line-height:1.7; }
     .code-card { background:#18352d; color:#e7f3e9; border-radius:14px; padding:13px 15px; margin:0 0 14px; }
-    .code-label { display:block; color:#a6c7af; font-size:11px; font-weight:700; margin-bottom:5px; }
-    code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:13px; white-space:pre-wrap; word-break:break-word; }
-    .audio-box { display:flex; align-items:center; gap:10px; color:var(--muted); font-size:13px; margin:0 0 10px; }
+    .code-label { display:block; color:#a6c7af; font-size:14px; font-weight:700; margin-bottom:7px; }
+    code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:16px; white-space:pre-wrap; word-break:break-word; }
+    .audio-box { display:flex; align-items:center; gap:10px; color:var(--muted); font-size:14px; margin:0 0 10px; }
     .audio-box audio { width:100%; height:38px; }
     .audio-box video { display:block; width:100%; max-height:150px; border-radius:12px; background:#10231c; }
     .spacer { flex:1; min-height:12px; }
     .actions { display:flex; gap:10px; margin-top:12px; }
-    .btn { min-height:50px; padding:12px 18px; border:0; border-radius:14px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; text-align:center; }
+    .btn { min-height:52px; padding:12px 18px; border:0; border-radius:14px; font-size:17px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; text-align:center; }
     .btn.primary { color:white; background:var(--green); flex:1; box-shadow:0 5px 12px #2e705825; }
     .btn.secondary { color:var(--green); background:#e9f1ea; }
     .btn:focus-visible,input:focus-visible,a:focus-visible { outline:3px solid #d28a32; outline-offset:3px; }
     .quiz-question { padding:15px; border:1px solid var(--line); border-radius:16px; margin:8px 0; }
-    .quiz-question legend { font-weight:800; line-height:1.5; padding:0 4px; }
-    .option { display:flex; gap:10px; align-items:flex-start; padding:10px 9px; border-radius:10px; line-height:1.45; color:#40564d; }
+    .quiz-question legend { font-size:17px; font-weight:800; line-height:1.55; padding:0 4px; }
+    .option { display:flex; gap:10px; align-items:flex-start; padding:10px 9px; border-radius:10px; font-size:16px; line-height:1.55; color:#40564d; }
     .option:hover { background:#f0f5ef; }
     .option input { margin-top:4px; accent-color:var(--green); transform:scale(1.12); }
     .feedback { min-height:25px; margin:8px 2px 0; font-weight:700; line-height:1.5; }
-    .summary-list { padding-left:21px; color:#40564d; line-height:1.75; }
+    .summary-list { padding-left:21px; color:#40564d; font-size:16px; line-height:1.8; }
     .checklist { background:#f0f5ef; border-radius:16px; padding:15px; margin:12px 0; }
-    .checklist label { display:flex; align-items:center; gap:10px; padding:7px 0; line-height:1.45; }
+    .checklist label { display:flex; align-items:center; gap:10px; padding:8px 0; font-size:16px; line-height:1.55; }
     .checklist input { accent-color:var(--green); transform:scale(1.15); }
-    .small-note { color:var(--muted); font-size:12px; line-height:1.55; }
-    .credits { border-top:1px solid var(--line); margin-top:18px; padding-top:14px; color:#52665d; font-size:12px; line-height:1.7; }
-    .credits h3 { margin:0 0 7px; color:var(--ink); font-size:14px; }
+    .small-note { color:var(--muted); font-size:14px; line-height:1.65; }
+    .credits { border-top:1px solid var(--line); margin-top:18px; padding-top:14px; color:#52665d; font-size:14px; line-height:1.75; }
+    .credits h3 { margin:0 0 7px; color:var(--ink); font-size:16px; }
     .credits p { margin:3px 0; }
-    .footer { border-top:1px solid var(--line); padding:10px 20px max(10px,env(safe-area-inset-bottom)); color:#7a8981; font-size:11px; line-height:1.45; }
+    .footer { border-top:1px solid var(--line); padding:12px 20px max(12px,env(safe-area-inset-bottom)); color:#7a8981; font-size:14px; line-height:1.6; }
     @media (min-width:600px) { .app { min-height:min(100svh,900px); margin:20px 0; border-radius:24px; } }
-    @media (max-height:730px) { .screen { padding-top:14px; padding-bottom:16px; } .hero-image { height:34svh; min-height:180px; } .lesson-image { margin:6px 0 10px; } h2 { font-size:22px; } }
+    @media (max-height:730px) { .screen { padding-top:14px; padding-bottom:16px; } .hero-image { height:34svh; min-height:180px; } .lesson-image { margin:6px 0 10px; } h2 { font-size:24px; } }
   </style>
 </head>
 <body>
@@ -89,7 +89,7 @@
         <p class="lead">뇌혈관이 막히거나 터져 뇌에 혈액과 산소가 제대로 전달되지 않는 질환입니다.</p>
         <div class="lesson-image"><img src="img/fig02.png" alt="건강한 혈관과 좁아진 혈관을 비교한 뇌 그림" onerror="this.hidden=true"><div class="image-fallback">뇌혈관의 흐름을<br>그림으로 확인해 보세요.</div></div>
         <div class="callout">갑작스러운 한쪽 마비, 말이 어눌해짐, 시야 이상이 나타나면 즉시 119에 연락하세요.</div>
-        <div class="code-card"><span class="code-label">오늘의 한 줄 코드</span><code>뇌 건강 = 혈관 건강을 꾸준히 살피기</code></div>
+        <div class="code-card"><span class="code-label">오늘의 한 줄 실천</span><code>뇌 건강 = 혈관 건강을 꾸준히 살피기</code></div>
         <div class="audio-box"><video id="narration1" src="audio/n3.mp4" poster="img/fig02.png" controls playsinline preload="metadata" aria-label="뇌혈관질환 개념 내레이션 MP4"></video></div>
         <p class="small-note" id="audioNote1">화면이 열리면 자동 재생되며, 끝나면 다음 내용으로 이동합니다.</p>
         <div class="spacer"></div><div class="actions"><button class="btn primary next-btn" data-next="lesson2">다음 내용</button></div>
@@ -100,7 +100,7 @@
         <p class="lead">걷기처럼 지속할 수 있는 신체활동을 생활에 더하고, 담배는 피우지 않는 방향으로 실천해 보세요.</p>
         <div class="lesson-image"><img src="img/fig03.png" alt="걷기 운동과 금연을 나타내는 두 장면" onerror="this.hidden=true"><div class="image-fallback">걷기와 금연처럼<br>실천 가능한 습관부터 시작해요.</div></div>
         <div class="callout">가능한 범위에서 하루 30분 이상 걷기 등 규칙적으로 움직여 보세요. 몸 상태나 기존 질환에 맞는 운동은 의료진과 상담하세요.</div>
-        <div class="code-card"><span class="code-label">오늘의 한 줄 코드</span><code>매일의 걷기 + 금연 = 혈관을 위한 선택</code></div>
+        <div class="code-card"><span class="code-label">오늘의 한 줄 실천</span><code>매일의 걷기 + 금연 = 혈관을 위한 선택</code></div>
         <div class="audio-box"><video id="narration2" src="audio/n2.mp4" poster="img/fig03.png" controls playsinline preload="metadata" aria-label="생활습관 예방 내레이션 MP4"></video></div>
         <p class="small-note">화면이 열리면 자동 재생되며, 끝나면 다음 내용으로 이동합니다.</p>
         <div class="spacer"></div><div class="actions"><button class="btn secondary back-btn" data-back="lesson1">이전</button><button class="btn primary next-btn" data-next="lesson3">다음 내용</button></div>
@@ -114,7 +114,7 @@
           <div class="image-wrap"><img src="img/fig05.png" alt="복약 안내를 확인하는 어르신 부부" onerror="this.hidden=true"><div class="image-fallback">약은 처방과 안내에<br>맞춰 복용하기</div></div>
         </div>
         <div class="callout">술은 피하고, 국물·절임 음식 등 짠 음식은 줄여 보세요. 약을 임의로 중단하거나 양을 바꾸지 말고 궁금한 점은 의료진이나 약사에게 확인하세요.</div>
-        <div class="code-card"><span class="code-label">오늘의 한 줄 코드</span><code>싱겁게 먹기 + 처방대로 복용하기</code></div>
+        <div class="code-card"><span class="code-label">오늘의 한 줄 실천</span><code>싱겁게 먹기 + 처방대로 복용하기</code></div>
         <div class="audio-box"><video id="narration3" src="audio/n1.mp4" poster="img/fig04.png" controls playsinline preload="metadata" aria-label="식습관과 복약 내레이션 MP4"></video></div>
         <p class="small-note">화면이 열리면 자동 재생되며, 끝나면 퀴즈로 이동합니다.</p>
         <div class="spacer"></div><div class="actions"><button class="btn secondary back-btn" data-back="lesson2">이전</button><button class="btn primary next-btn" data-next="quiz">퀴즈 풀기</button></div>
